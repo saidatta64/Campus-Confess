@@ -1,13 +1,12 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import "./globals.css"; // Ensure you have global styles
-
+import SessionWrapper from '../components/ui/SessionProvider'
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"], // Add required weights
   variable: "--font-poppins",
 });
-
 
 export const metadata = {
   title: "Campus Confess",
@@ -20,11 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className={poppins.variable}>
-      <body>
-       
-        {children}
-      </body>
+    <SessionWrapper>
+    <html lang="en" className={poppins.variable}>
+      <body>{children}</body>
     </html>
+    </SessionWrapper>
   );
 }
