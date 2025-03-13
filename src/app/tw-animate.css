@@ -1,0 +1,49 @@
+/* tw-animate.css */
+
+/* Smooth opacity transition for fade effects */
+@keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .fade-out {
+    animation: fade-out 0.5s ease-out forwards;
+  }
+  
+  /* Smooth fade-in */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fade-in 0.5s ease-in forwards;
+  }
+  
+  /* Gooey effect */
+  .gooey-filter {
+    filter: url("#goo-filter");
+  }
+  
+  /* Pixel Trail Effect */
+  .pixel-trail {
+    pointer-events: none;
+  }
+  
+  .pixel-dot {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Cursor Trail */
+  .cursor-pointer-none {
+    pointer-events: none;
+  }
+  
